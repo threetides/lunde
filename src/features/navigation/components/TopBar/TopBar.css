@@ -1,0 +1,18 @@
+.topbar {
+  border-bottom: 1px solid var(--color-subtle-border);
+  padding: var(--space-md);
+}
+
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.topbar__logo img {
+  height: var(--size-icon-lg);
+}
+
+.topbar__logo h3 {
+  font-weight: var(--font-weight-medium);
+}
