@@ -1,0 +1,46 @@
+/* 
+1 App background
+2 Subtle background
+3 UI element background
+4 Hovered UI element background
+5 Active / Selected UI element background
+6 Subtle borders and separators
+7 UI element border and focus rings
+8 Hovered UI element border
+9 Solid backgrounds
+10 Hovered solid backgrounds
+11 Low-contrast text
+12 High-contrast text 
+*/
+
+:root {
+  --color-app-background: #fcfcfc;
+  --color-subtle-background: #f9f9f9;
+  --color-ui-element-background: #f0f0f0;
+  --color-hovered-ui-element-background: #e8e8e8;
+  --color-active-ui-element-background: #e0e0e0;
+  --color-subtle-border: #d9d9d9;
+  --color-ui-element-border: #cecece;
+  --color-hovered-ui-element-border: #bbbbbb;
+  --color-solid-background: #8d8d8d;
+  --color-hovered-solid-background: #838383;
+  --color-low-contrast-text: #646464;
+  --color-high-contrast-text: #202020;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-app-background: #111111;
+    --color-subtle-background: #191919;
+    --color-ui-element-background: #222222;
+    --color-hovered-ui-element-background: #2a2a2a;
+    --color-active-ui-element-background: #313131;
+    --color-subtle-border: #3a3a3a;
+    --color-ui-element-border: #484848;
+    --color-hovered-ui-element-border: #606060;
+    --color-solid-background: #6e6e6e;
+    --color-hovered-solid-background: #7b7b7b;
+    --color-low-contrast-text: #b4b4b4;
+    --color-high-contrast-text: #eeeeee;
+  }
+}

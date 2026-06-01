@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("../assets/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html {
+  background-color: var(--color-app-background);
+}
+
+body {
+  font-family: "PlusJakartaSans", system-ui, sans-serif;
+  color: var(--color-high-contrast-text);
+}
