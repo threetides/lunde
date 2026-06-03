@@ -13,12 +13,17 @@
     "check": "bun run fmt && bun run lint && bun run type-check"
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
+    "@tanstack/react-router": "^1.170.11",
+    "jotai": "^2.20.0",
+    "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@tanstack/router-plugin": "^1.168.14",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.12.4",
     "@types/react": "^19.2.15",

@@ -54,6 +54,15 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  /* Radius */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-full: 9999px; /* pills, circles */
+
   /* Colors */
   --color-app-background: #fcfcfc;
   --color-subtle-background: #f9f9f9;

@@ -1,0 +1,16 @@
+.sidemenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 150ms;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    transform: translatex(-100%);
+  }
+
+  .navigation-menu {
+    height: 100%;
+  }
+}

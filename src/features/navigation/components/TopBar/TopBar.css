@@ -1,6 +1,9 @@
 .topbar {
   border-bottom: 1px solid var(--color-subtle-border);
   padding: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .topbar__logo {
@@ -15,4 +18,10 @@
 
 .topbar__logo h3 {
   font-weight: var(--font-weight-medium);
+}
+
+.topbar__hamburger {
+  height: var(--size-icon-lg);
+  background-color: transparent;
+  border: none;
 }
