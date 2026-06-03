@@ -2,7 +2,7 @@ import { Animate } from "@/components/Animate/Animate"
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu"
 import { TopBar } from "@/features/navigation/components/TopBar/TopBar"
 import { menuOpenAtom } from "@/features/navigation/navigationAtoms"
-import { createFileRoute } from "@tanstack/react-router"
+import { createFileRoute, Link } from "@tanstack/react-router"
 import { useAtom } from "jotai"
 import { ExternalLink } from "lucide-react"
 
@@ -21,9 +21,7 @@ function RouteComponent() {
           <NavigationMenu orientation="vertical">
             <NavigationMenu.List>
               <NavigationMenu.Item>
-                <NavigationMenu.Link href="https://nrk.no" target="_blank" icon={ExternalLink}>
-                  NRK
-                </NavigationMenu.Link>
+                <NavigationMenu.Link icon={ExternalLink} render={<Link to="/">Home</Link>} />
               </NavigationMenu.Item>
               <NavigationMenu.Item>
                 <NavigationMenu.Link href="https://vg.no" target="_blank" icon={ExternalLink}>
