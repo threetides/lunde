@@ -5,6 +5,10 @@
   font-display: swap;
 }
 
+*:focus-visible {
+  outline: 1px solid var(--color-ui-element-border);
+}
+
 html,
 body,
 #root {

@@ -21,22 +21,41 @@ function RouteComponent() {
           <NavigationMenu orientation="vertical">
             <NavigationMenu.List>
               <NavigationMenu.Item>
-                <NavigationMenu.Link icon={ExternalLink} render={<Link to="/">Home</Link>} />
+                <NavigationMenu.Link
+                  icon={ExternalLink}
+                  render={<Link to="/">Home</Link>}
+                  onClick={() => setOpen(false)}
+                />
               </NavigationMenu.Item>
               <NavigationMenu.Item>
-                <NavigationMenu.Link href="https://vg.no" target="_blank" icon={ExternalLink}>
+                <NavigationMenu.Link
+                  href="https://vg.no"
+                  target="_blank"
+                  icon={ExternalLink}
+                  onClick={() => setOpen(false)}
+                >
                   VG
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
             </NavigationMenu.List>
             <NavigationMenu.List>
               <NavigationMenu.Item>
-                <NavigationMenu.Link href="https://komplett.no" target="_blank" icon={ExternalLink}>
+                <NavigationMenu.Link
+                  href="https://komplett.no"
+                  target="_blank"
+                  icon={ExternalLink}
+                  onClick={() => setOpen(false)}
+                >
                   Komplett
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
               <NavigationMenu.Item>
-                <NavigationMenu.Link href="https://elkjop.no" target="_blank" icon={ExternalLink}>
+                <NavigationMenu.Link
+                  href="https://elkjop.no"
+                  target="_blank"
+                  icon={ExternalLink}
+                  onClick={() => setOpen(false)}
+                >
                   Elkjøp
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
