@@ -15,5 +15,11 @@
     height: 100%;
     height: 100dvh;
     min-width: 256px;
+    padding-top: var(--space-md);
+  }
+
+  h4 {
+    color: var(--color-low-contrast-text);
+    padding-left: var(--space-xs);
   }
 }

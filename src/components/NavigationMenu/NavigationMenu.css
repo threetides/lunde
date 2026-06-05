@@ -34,3 +34,7 @@
   height: var(--size-icon-sm);
   width: var(--size-icon-sm);
 }
+
+.navigation-menu__item .active {
+  background-color: var(--color-ui-element-background);
+}
