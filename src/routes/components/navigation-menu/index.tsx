@@ -1,3 +1,4 @@
+import { DocumentationPage } from "@/features/documentation/components/DocumentationPage/DocumentationPage"
 import { createFileRoute } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/components/navigation-menu/")({
@@ -5,5 +6,5 @@ export const Route = createFileRoute("/components/navigation-menu/")({
 })
 
 function RouteComponent() {
-  return <div>Hello "/components/navigation-menu/"!</div>
+  return <DocumentationPage title="Navigation menu"></DocumentationPage>
 }
