@@ -6,8 +6,7 @@
   transition: transform 150ms;
   box-shadow: var(--shadow-xl);
 
-  &[data-starting-style],
-  &[data-ending-style] {
+  &[data-starting-style] {
     transform: translatex(-100%);
   }
 
