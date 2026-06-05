@@ -3,18 +3,12 @@
   top: 0;
   left: 0;
   bottom: 0;
-  box-shadow: var(--shadow-xl);
-  transform: translateX(-100%);
   transition: transform 150ms;
+  box-shadow: var(--shadow-xl);
 
-  /* On-screen only while open; resting/default state is off-screen to the
-     left, so any frame painted without the open state keeps it hidden. */
-  &[data-open] {
-    transform: translateX(0);
-  }
-
-  &[data-starting-style] {
-    transform: translateX(-100%);
+  &[data-starting-style],
+  &[data-ending-style] {
+    transform: translatex(-100%);
   }
 
   .navigation-menu {
