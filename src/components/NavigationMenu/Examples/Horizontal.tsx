@@ -1,33 +1,28 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu"
-import { Link } from "@tanstack/react-router"
-import { ExternalLink } from "lucide-react"
+import { Menu, SquareMousePointer, SquarePlus, TextCursorInput } from "lucide-react"
 
 export const Horizontal = (
   <NavigationMenu>
     <NavigationMenu.List>
       <NavigationMenu.Item>
-        <NavigationMenu.Link
-          icon={ExternalLink}
-          render={<Link to="/components/input">Input</Link>}
-        />
+        <NavigationMenu.Link icon={TextCursorInput} href="/components/input">
+          Input
+        </NavigationMenu.Link>
       </NavigationMenu.Item>
       <NavigationMenu.Item>
-        <NavigationMenu.Link
-          icon={ExternalLink}
-          render={<Link to="/components/button">Button</Link>}
-        />
+        <NavigationMenu.Link icon={SquarePlus} href="/components/button">
+          Button
+        </NavigationMenu.Link>
       </NavigationMenu.Item>
       <NavigationMenu.Item>
-        <NavigationMenu.Link
-          icon={ExternalLink}
-          render={<Link to="/components/navigation-menu">Navigation menu</Link>}
-        />
+        <NavigationMenu.Link icon={Menu} href="/components/navigation-menu">
+          Navigation menu
+        </NavigationMenu.Link>
       </NavigationMenu.Item>
       <NavigationMenu.Item>
-        <NavigationMenu.Link
-          icon={ExternalLink}
-          render={<Link to="/components/select">Select</Link>}
-        />
+        <NavigationMenu.Link icon={SquareMousePointer} href="/components/select">
+          Select
+        </NavigationMenu.Link>
       </NavigationMenu.Item>
     </NavigationMenu.List>
   </NavigationMenu>

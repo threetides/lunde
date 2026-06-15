@@ -26,12 +26,12 @@ export const shikiTheme: Theme = {
   type: "dark",
   colors: {
     "editor.background": "var(--gray-2)",
-    "editor.foreground": "var(--gray-12)",
+    "editor.foreground": "var(--gray-12)"
   },
   tokenColors: [
     {
       scope: ["comment", "punctuation.definition.comment", "string.comment"],
-      settings: { foreground: "var(--gray-11)", fontStyle: "italic" },
+      settings: { foreground: "var(--gray-11)", fontStyle: "italic" }
     },
     {
       // keywords, storage, char constants, embedded punctuation
@@ -41,14 +41,14 @@ export const shikiTheme: Theme = {
         "storage.type",
         "constant.character",
         "constant.other.placeholder",
-        "punctuation.section.embedded",
+        "punctuation.section.embedded"
       ],
-      settings: { foreground: "var(--tomato-11)" },
+      settings: { foreground: "var(--tomato-11)" }
     },
     {
       // import/package modifiers stay neutral, as 2026 Dark does
       scope: ["storage.modifier.import", "storage.modifier.package", "storage.type.java"],
-      settings: { foreground: "var(--gray-12)" },
+      settings: { foreground: "var(--gray-12)" }
     },
     {
       // constants, enum members, support, language vars, property names
@@ -63,19 +63,19 @@ export const shikiTheme: Theme = {
         "support.constant",
         "support.variable",
         "meta.property-name",
-        "meta.module-reference",
+        "meta.module-reference"
       ],
-      settings: { foreground: "var(--blue-11)" },
+      settings: { foreground: "var(--blue-11)" }
     },
     {
       // strings & regex — the lighter blue
       scope: ["string", "string.regexp", "constant.other.reference.link", "string.other.link"],
-      settings: { foreground: "var(--blue-12)" },
+      settings: { foreground: "var(--blue-12)" }
     },
     {
       // variable & declaration names
       scope: ["entity.name", "meta.definition.variable", "meta.export.default", "variable"],
-      settings: { foreground: "var(--orange-11)" },
+      settings: { foreground: "var(--orange-11)" }
     },
     {
       // parameters, members and other plain identifiers stay neutral
@@ -84,37 +84,37 @@ export const shikiTheme: Theme = {
         "variable.parameter.function",
         "meta.object.member",
         "meta.tag.attributes",
-        "meta.embedded.expression",
+        "meta.embedded.expression"
       ],
-      settings: { foreground: "var(--gray-12)" },
+      settings: { foreground: "var(--gray-12)" }
     },
     {
       scope: "entity.name.function",
-      settings: { foreground: "var(--purple-11)" },
+      settings: { foreground: "var(--purple-11)" }
     },
     {
       // tags, components, JSON keys
       scope: ["entity.name.tag", "support.class.component", "support.type.property-name.json"],
-      settings: { foreground: "var(--grass-11)" },
+      settings: { foreground: "var(--grass-11)" }
     },
     {
       scope: "string.regexp constant.character.escape",
-      settings: { foreground: "var(--grass-11)", fontStyle: "bold" },
+      settings: { foreground: "var(--grass-11)", fontStyle: "bold" }
     },
     {
       scope: ["invalid.broken", "invalid.deprecated", "invalid.illegal", "invalid.unimplemented"],
-      settings: { foreground: "var(--tomato-11)", fontStyle: "italic" },
+      settings: { foreground: "var(--tomato-11)", fontStyle: "italic" }
     },
     // Markdown
     {
       scope: ["markup.heading", "markup.heading entity.name"],
-      settings: { foreground: "var(--blue-11)", fontStyle: "bold" },
+      settings: { foreground: "var(--blue-11)", fontStyle: "bold" }
     },
     { scope: "markup.quote", settings: { foreground: "var(--grass-11)" } },
     { scope: "markup.bold", settings: { foreground: "var(--gray-12)", fontStyle: "bold" } },
     { scope: "markup.italic", settings: { foreground: "var(--gray-12)", fontStyle: "italic" } },
     { scope: "markup.inline.raw", settings: { foreground: "var(--blue-11)" } },
     { scope: "markup.underline", settings: { fontStyle: "underline" } },
-    { scope: "markup.strikethrough", settings: { fontStyle: "strikethrough" } },
-  ],
+    { scope: "markup.strikethrough", settings: { fontStyle: "strikethrough" } }
+  ]
 }

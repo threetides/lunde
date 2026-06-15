@@ -25,11 +25,15 @@
 
 .navigation-menu__link {
   display: flex;
-  gap: var(--space-2xs);
+  gap: var(--space-xs);
   align-items: center;
   padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--radius-sm);
   white-space: nowrap;
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .navigation-menu__link:hover {

@@ -8,41 +8,40 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as ComponentsNavigationMenuIndexRouteImport } from './routes/components/navigation-menu/index'
+import { Route as rootRouteImport } from "./routes/__root"
+import { Route as IndexRouteImport } from "./routes/index"
+import { Route as ComponentsNavigationMenuIndexRouteImport } from "./routes/components/navigation-menu/index"
 
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
+  id: "/",
+  path: "/",
+  getParentRoute: () => rootRouteImport
 } as any)
-const ComponentsNavigationMenuIndexRoute =
-  ComponentsNavigationMenuIndexRouteImport.update({
-    id: '/components/navigation-menu/',
-    path: '/components/navigation-menu/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const ComponentsNavigationMenuIndexRoute = ComponentsNavigationMenuIndexRouteImport.update({
+  id: "/components/navigation-menu/",
+  path: "/components/navigation-menu/",
+  getParentRoute: () => rootRouteImport
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
+  "/": typeof IndexRoute
+  "/components/navigation-menu/": typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/components/navigation-menu': typeof ComponentsNavigationMenuIndexRoute
+  "/": typeof IndexRoute
+  "/components/navigation-menu": typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
+  "/": typeof IndexRoute
+  "/components/navigation-menu/": typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/components/navigation-menu/'
+  fullPaths: "/" | "/components/navigation-menu/"
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/components/navigation-menu'
-  id: '__root__' | '/' | '/components/navigation-menu/'
+  to: "/" | "/components/navigation-menu"
+  id: "__root__" | "/" | "/components/navigation-menu/"
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -50,19 +49,19 @@ export interface RootRouteChildren {
   ComponentsNavigationMenuIndexRoute: typeof ComponentsNavigationMenuIndexRoute
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
+    "/": {
+      id: "/"
+      path: "/"
+      fullPath: "/"
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/components/navigation-menu/': {
-      id: '/components/navigation-menu/'
-      path: '/components/navigation-menu'
-      fullPath: '/components/navigation-menu/'
+    "/components/navigation-menu/": {
+      id: "/components/navigation-menu/"
+      path: "/components/navigation-menu"
+      fullPath: "/components/navigation-menu/"
       preLoaderRoute: typeof ComponentsNavigationMenuIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -71,7 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ComponentsNavigationMenuIndexRoute: ComponentsNavigationMenuIndexRoute,
+  ComponentsNavigationMenuIndexRoute: ComponentsNavigationMenuIndexRoute
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
