@@ -4,7 +4,7 @@
   gap: var(--space-lg);
   padding: var(--space-2xs);
   border-radius: var(--radius-md);
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .navigation-menu[data-orientation="vertical"] {
@@ -20,7 +20,7 @@
 }
 
 .navigation-menu__item {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 .navigation-menu__link {
