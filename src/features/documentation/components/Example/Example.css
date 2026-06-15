@@ -1,22 +1,26 @@
 .example {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-md);
   max-width: 1024px;
 }
 
 .example__display {
   border: 1px solid var(--color-ui-element-border);
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
   border-radius: var(--radius-md);
   overflow: auto;
 }
 
 .example__shiki .shiki {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
   border-radius: var(--radius-md);
 }
 
 .example__ingress {
   color: var(--color-low-contrast-text);
+}
+
+.rs-language-label {
+  display: none;
 }
