@@ -29,17 +29,21 @@ bun run check    # format + lint + type-check
 ## Project structure
 
 ```
-lunde/
-├── public/             static assets (favicons, web manifest)
-├── src/
-│   ├── styles/         global styles, reset, and design tokens
-│   ├── assets/         fonts and images
-│   └── main.tsx        site entry point
-├── vite.config.ts
-└── package.json
+src/
+├── components/   the design system — Base UI primitives wrapped and styled
+├── features/     the documentation site that consumes them
+├── routes/       file-based routes (TanStack Router)
+└── styles/       reset, design tokens, and global styles
 ```
 
-The CSS tokens live in [`src/styles/tokens.css`](src/styles/tokens.css).
+Two layers: `components/` is the library, `features/` is the site built on it.
+
+A component is a thin wrapper over a Base UI primitive, styled with its own
+CSS. Each one is documented by a route that renders live examples next to their
+source — the source is imported with `?raw`, so the code shown is always the
+code that runs.
+
+Design tokens live in [`src/styles/tokens.css`](src/styles/tokens.css).
 
 ## License
 
