@@ -17,7 +17,9 @@
 }
 
 .example__ingress {
-  color: var(--color-low-contrast-text);
+  p {
+    color: var(--color-low-contrast-text);
+  }
 }
 
 .rs-language-label {

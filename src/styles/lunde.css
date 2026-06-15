@@ -1,14 +1,10 @@
 main {
   display: flex;
   flex: 1;
-  gap: var(--space-lg);
+  overflow: hidden;
 }
 
 .root {
   display: flex;
   flex-direction: column;
-}
-
-main {
-  overflow: hidden;
 }
