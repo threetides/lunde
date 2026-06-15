@@ -13,10 +13,18 @@ export const Route = createFileRoute("/components/navigation-menu/")({
 function RouteComponent() {
   return (
     <DocumentationPage title="Navigation menu">
-      <Example subtitle="Horizontal layout" code={HorizontalSource}>
+      <Example
+        subtitle="Horizontal layout"
+        ingress="The component is oriented horizontal by default"
+        code={HorizontalSource}
+      >
         {Horizontal}
       </Example>
-      <Example subtitle="Vertical layout" code={VerticalSource}>
+      <Example
+        subtitle="Vertical layout"
+        ingress="To orient the component vertically, add the orientation prop and set it to 'vertical'"
+        code={VerticalSource}
+      >
         {Vertical}
       </Example>
     </DocumentationPage>

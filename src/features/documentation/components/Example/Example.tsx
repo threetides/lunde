@@ -5,15 +5,17 @@ import "./Example.css"
 
 interface ExampleProps {
   subtitle: string
+  ingress: string
   children: ReactNode
   code: string
 }
 
-export const Example: FC<ExampleProps> = ({ subtitle, children, code }) => (
+export const Example: FC<ExampleProps> = ({ subtitle, ingress, children, code }) => (
   <div className="example">
     <h4>{subtitle}</h4>
+    <p className="example__ingress">{ingress}</p>
     <div className="example__display">{children}</div>
-    <ShikiHighlighter language="tsx" theme={shikiTheme} className="example__shiki">
+    <ShikiHighlighter showLineNumbers language="tsx" theme={shikiTheme} className="example__shiki">
       {code}
     </ShikiHighlighter>
   </div>
