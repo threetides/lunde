@@ -1,0 +1,179 @@
+/*
+ * Radix color scales. Light values are the default; dark values apply under the
+ * same condition as tokens.css (OS dark preference, unless forced light), so the
+ * scales flip with the site theme. Steps 11/12 are the readable text steps in
+ * both modes — see shikiTheme.ts, which builds the code theme from these.
+ */
+:root {
+  /* Gray */
+  --gray-1: #fcfcfc;
+  --gray-2: #f9f9f9;
+  --gray-3: #f0f0f0;
+  --gray-4: #e8e8e8;
+  --gray-5: #e0e0e0;
+  --gray-6: #d9d9d9;
+  --gray-7: #cecece;
+  --gray-8: #bbbbbb;
+  --gray-9: #8d8d8d;
+  --gray-10: #838383;
+  --gray-11: #646464;
+  --gray-12: #202020;
+
+  /* Tomato */
+  --tomato-1: #fffcfc;
+  --tomato-2: #fff8f7;
+  --tomato-3: #feebe7;
+  --tomato-4: #ffdcd3;
+  --tomato-5: #ffcdc2;
+  --tomato-6: #fdbdaf;
+  --tomato-7: #f5a898;
+  --tomato-8: #ec8e7b;
+  --tomato-9: #e54d2e;
+  --tomato-10: #dd4425;
+  --tomato-11: #d13415;
+  --tomato-12: #5c271f;
+
+  /* Blue */
+  --blue-1: #fbfdff;
+  --blue-2: #f4faff;
+  --blue-3: #e6f4fe;
+  --blue-4: #d5efff;
+  --blue-5: #c2e5ff;
+  --blue-6: #acd8fc;
+  --blue-7: #8ec8f6;
+  --blue-8: #5eb1ef;
+  --blue-9: #0090ff;
+  --blue-10: #0588f0;
+  --blue-11: #0d74ce;
+  --blue-12: #113264;
+
+  /* Orange */
+  --orange-1: #fefcfb;
+  --orange-2: #fff7ed;
+  --orange-3: #ffefd6;
+  --orange-4: #ffdfb5;
+  --orange-5: #ffd19a;
+  --orange-6: #ffc182;
+  --orange-7: #f5ae73;
+  --orange-8: #ec9455;
+  --orange-9: #f76b15;
+  --orange-10: #ef5f00;
+  --orange-11: #cc4e00;
+  --orange-12: #582d1d;
+
+  /* Purple */
+  --purple-1: #fefcfe;
+  --purple-2: #fbf7fe;
+  --purple-3: #f7edfe;
+  --purple-4: #f2e2fc;
+  --purple-5: #ead5f9;
+  --purple-6: #e0c4f4;
+  --purple-7: #d1afec;
+  --purple-8: #be93e4;
+  --purple-9: #8e4ec6;
+  --purple-10: #8347b9;
+  --purple-11: #8145b5;
+  --purple-12: #402060;
+
+  /* Grass */
+  --grass-1: #fbfefb;
+  --grass-2: #f5fbf5;
+  --grass-3: #e9f6e9;
+  --grass-4: #daf1db;
+  --grass-5: #c9e8ca;
+  --grass-6: #b2ddb5;
+  --grass-7: #94ce9a;
+  --grass-8: #65ba74;
+  --grass-9: #46a758;
+  --grass-10: #3e9b4f;
+  --grass-11: #2a7e3b;
+  --grass-12: #203c25;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Gray */
+    --gray-1: #111111;
+    --gray-2: #191919;
+    --gray-3: #222222;
+    --gray-4: #2a2a2a;
+    --gray-5: #313131;
+    --gray-6: #3a3a3a;
+    --gray-7: #484848;
+    --gray-8: #606060;
+    --gray-9: #6e6e6e;
+    --gray-10: #7b7b7b;
+    --gray-11: #b4b4b4;
+    --gray-12: #eeeeee;
+
+    /* Tomato */
+    --tomato-1: #181111;
+    --tomato-2: #1f1513;
+    --tomato-3: #391714;
+    --tomato-4: #4e1511;
+    --tomato-5: #5e1c16;
+    --tomato-6: #6e2920;
+    --tomato-7: #853a2d;
+    --tomato-8: #ac4d39;
+    --tomato-9: #e54d2e;
+    --tomato-10: #ec6142;
+    --tomato-11: #ff977d;
+    --tomato-12: #fbd3cb;
+
+    /* Blue */
+    --blue-1: #0d1520;
+    --blue-2: #111927;
+    --blue-3: #0d2847;
+    --blue-4: #003362;
+    --blue-5: #004074;
+    --blue-6: #104d87;
+    --blue-7: #205d9e;
+    --blue-8: #2870bd;
+    --blue-9: #0090ff;
+    --blue-10: #3b9eff;
+    --blue-11: #70b8ff;
+    --blue-12: #c2e6ff;
+
+    /* Orange */
+    --orange-1: #17120e;
+    --orange-2: #1e160f;
+    --orange-3: #331e0b;
+    --orange-4: #462100;
+    --orange-5: #562800;
+    --orange-6: #66350c;
+    --orange-7: #7e451d;
+    --orange-8: #a35829;
+    --orange-9: #f76b15;
+    --orange-10: #ff801f;
+    --orange-11: #ffa057;
+    --orange-12: #ffe0c2;
+
+    /* Purple */
+    --purple-1: #18111b;
+    --purple-2: #1e1523;
+    --purple-3: #301c3b;
+    --purple-4: #3d224e;
+    --purple-5: #48295c;
+    --purple-6: #54346b;
+    --purple-7: #664282;
+    --purple-8: #8457aa;
+    --purple-9: #8e4ec6;
+    --purple-10: #9a5cd0;
+    --purple-11: #d19dff;
+    --purple-12: #ecd9fa;
+
+    /* Grass */
+    --grass-1: #0e1511;
+    --grass-2: #141a15;
+    --grass-3: #1b2a1e;
+    --grass-4: #1d3a24;
+    --grass-5: #25482d;
+    --grass-6: #2d5736;
+    --grass-7: #366740;
+    --grass-8: #3e7949;
+    --grass-9: #46a758;
+    --grass-10: #53b365;
+    --grass-11: #71d083;
+    --grass-12: #c2f0c2;
+  }
+}

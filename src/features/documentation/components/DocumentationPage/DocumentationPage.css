@@ -1,3 +1,6 @@
 .documentation-page {
   padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
 }

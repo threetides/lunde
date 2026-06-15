@@ -4,6 +4,7 @@ import "@/styles/index.css"
 import "@/styles/reset.css"
 import "@/styles/tokens.css"
 import "@/styles/lunde.css"
+import "@/styles/primitives/colors.css"
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen"

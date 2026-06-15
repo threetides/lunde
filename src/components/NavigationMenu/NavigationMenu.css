@@ -4,6 +4,7 @@
   gap: var(--space-lg);
   padding: var(--space-2xs);
   border-radius: var(--radius-md);
+  overflow-y: auto;
 }
 
 .navigation-menu[data-orientation="vertical"] {
@@ -18,12 +19,17 @@
   flex-direction: column;
 }
 
+.navigation-menu__item {
+  flex: 1;
+}
+
 .navigation-menu__link {
   display: flex;
   gap: var(--space-2xs);
   align-items: center;
   padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--radius-sm);
+  white-space: nowrap;
 }
 
 .navigation-menu__link:hover {

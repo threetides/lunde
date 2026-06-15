@@ -6,5 +6,9 @@ export const Route = createFileRoute("/")({
 })
 
 function RouteComponent() {
-  return <DocumentationPage title="lunde"></DocumentationPage>
+  return (
+    <DocumentationPage title="lunde">
+      <p>Hei lunde</p>
+    </DocumentationPage>
+  )
 }
