@@ -25,3 +25,9 @@
   background-color: transparent;
   border: none;
 }
+
+@media (min-width: 1440px) {
+  .topbar__hamburger {
+    display: none;
+  }
+}

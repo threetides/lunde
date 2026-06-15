@@ -9,27 +9,44 @@ type LinkProps = ComponentProps<typeof BaseNavigationMenu.Link> & {
 }
 
 // your own object — safe to mutate
-const Root = ({ orientation, ...props }: ComponentProps<typeof BaseNavigationMenu.Root>) => {
+const Root = ({
+  orientation,
+  className,
+  ...props
+}: ComponentProps<typeof BaseNavigationMenu.Root>) => {
   return (
     <BaseNavigationMenu.Root
       {...props}
-      className="navigation-menu"
+      className={className ? `navigation-menu ${className}` : "navigation-menu"}
       data-orientation={orientation}
     />
   )
 }
 
-const List = (props: ComponentProps<typeof BaseNavigationMenu.List>) => {
-  return <BaseNavigationMenu.List {...props} className="navigation-menu__list" />
-}
-
-const Item = (props: ComponentProps<typeof BaseNavigationMenu.Item>) => {
-  return <BaseNavigationMenu.Item {...props} className="navigation-menu__item" />
-}
-
-const Link = ({ icon: Icon, children, ...props }: LinkProps) => {
+const List = ({ className, ...props }: ComponentProps<typeof BaseNavigationMenu.List>) => {
   return (
-    <BaseNavigationMenu.Link {...props} className="navigation-menu__link">
+    <BaseNavigationMenu.List
+      {...props}
+      className={className ? `navigation-menu__list ${className}` : "navigation-menu__list"}
+    />
+  )
+}
+
+const Item = ({ className, ...props }: ComponentProps<typeof BaseNavigationMenu.Item>) => {
+  return (
+    <BaseNavigationMenu.Item
+      {...props}
+      className={className ? `navigation-menu__item ${className}` : "navigation-menu__item"}
+    />
+  )
+}
+
+const Link = ({ icon: Icon, className, children, ...props }: LinkProps) => {
+  return (
+    <BaseNavigationMenu.Link
+      {...props}
+      className={className ? `navigation-menu__link ${className}` : "navigation-menu__link"}
+    >
       {Icon && <Icon className="navigation-menu__icon" />}
       {children}
     </BaseNavigationMenu.Link>

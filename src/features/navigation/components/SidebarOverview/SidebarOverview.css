@@ -1,0 +1,11 @@
+.sidebar-overview {
+  display: none;
+  background-color: var(--color-subtle-background);
+  min-width: 256px;
+}
+
+@media (min-width: 1440px) {
+  .sidebar-overview {
+    display: flex;
+  }
+}

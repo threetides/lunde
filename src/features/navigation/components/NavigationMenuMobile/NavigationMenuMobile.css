@@ -1,0 +1,31 @@
+.navigation-menu--mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 150ms;
+  box-shadow: var(--shadow-xl);
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    transform: translatex(-100%);
+  }
+
+  .navigation-menu {
+    height: 100%;
+    height: 100dvh;
+    min-width: 256px;
+    padding-top: var(--space-md);
+  }
+
+  h4 {
+    color: var(--color-low-contrast-text);
+    padding-left: var(--space-xs);
+  }
+}
+
+@media (min-width: 1440px) {
+  .navigation-menu--mobile {
+    display: none;
+  }
+}

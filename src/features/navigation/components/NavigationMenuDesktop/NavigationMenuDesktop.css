@@ -1,0 +1,17 @@
+.navigation-menu--desktop {
+  display: none;
+  min-width: 256px;
+  padding-top: var(--space-md);
+  border-radius: 0;
+
+  h4 {
+    color: var(--color-low-contrast-text);
+    padding-left: var(--space-xs);
+  }
+}
+
+@media (min-width: 1440px) {
+  .navigation-menu--desktop {
+    display: flex;
+  }
+}
