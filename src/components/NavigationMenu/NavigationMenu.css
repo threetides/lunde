@@ -1,6 +1,7 @@
 .navigation-menu {
   background-color: var(--color-subtle-background);
   display: inline-flex;
+  width: max-content;
   gap: var(--space-lg);
   padding: var(--space-2xs);
   border-radius: var(--radius-md);
