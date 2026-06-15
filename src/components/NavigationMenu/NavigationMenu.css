@@ -30,6 +30,7 @@
   padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--radius-sm);
   white-space: nowrap;
+  flex-shrink: 0;
 
   svg {
     flex-shrink: 0;
