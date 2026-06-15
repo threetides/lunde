@@ -15,7 +15,7 @@ export const Example: FC<ExampleProps> = ({ subtitle, ingress, children, code })
     <h4>{subtitle}</h4>
     <p className="example__ingress">{ingress}</p>
     <div className="example__display">{children}</div>
-    <ShikiHighlighter showLineNumbers language="tsx" theme={shikiTheme} className="example__shiki">
+    <ShikiHighlighter language="tsx" theme={shikiTheme} className="example__shiki">
       {code}
     </ShikiHighlighter>
   </div>

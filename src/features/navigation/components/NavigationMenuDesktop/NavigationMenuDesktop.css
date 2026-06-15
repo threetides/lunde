@@ -3,6 +3,7 @@
   min-width: 256px;
   padding-top: var(--space-md);
   border-radius: 0;
+  border-right: 1px solid var(--color-subtle-border);
 
   h4 {
     color: var(--color-low-contrast-text);
