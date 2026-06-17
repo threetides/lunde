@@ -1,10 +1,10 @@
 main {
   display: flex;
-  flex: 1;
   overflow: hidden;
 }
 
 .root {
   display: flex;
   flex-direction: column;
+  position: relative;
 }

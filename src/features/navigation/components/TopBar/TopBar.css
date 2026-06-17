@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-app-background);
+  width: 100%;
 }
 
 .topbar__logo {

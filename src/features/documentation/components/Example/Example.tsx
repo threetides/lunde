@@ -5,15 +5,16 @@ import "./Example.css"
 
 interface ExampleProps {
   subtitle: string
+  link: string
   ingress?: string
   children?: ReactNode
   code: string
 }
 
-export const Example: FC<ExampleProps> = ({ subtitle, ingress, children, code }) => (
+export const Example: FC<ExampleProps> = ({ subtitle, link, ingress, children, code }) => (
   <div className="example">
     <div className="example__ingress">
-      <h4>{subtitle}</h4>
+      <h4 id={link}>{subtitle}</h4>
       {ingress && <p className="example__ingress">{ingress}</p>}
     </div>
     {children && <div className="example__display">{children}</div>}

@@ -5,10 +5,6 @@
   font-display: swap;
 }
 
-* {
-  scrollbar-width: thin;
-}
-
 *:focus-visible {
   outline: 1px solid var(--color-ui-element-border);
 }
