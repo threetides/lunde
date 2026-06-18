@@ -15,6 +15,7 @@ export const SidebarOverview: FC = () => {
         {Object.values(links).map((value) => {
           return (
             <Link
+              key={value}
               to={"."}
               hash={value}
               onClick={() => startViewTransition(() => setActive(value))}

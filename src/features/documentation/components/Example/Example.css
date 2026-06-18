@@ -14,6 +14,7 @@
 .example__shiki .shiki {
   padding: var(--space-md);
   border-radius: var(--radius-md);
+  overflow: auto;
 }
 
 .example__ingress {

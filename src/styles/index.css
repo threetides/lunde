@@ -10,9 +10,7 @@
 }
 
 html,
-body,
-main,
-#root {
+body {
   height: 100%;
 }
 
