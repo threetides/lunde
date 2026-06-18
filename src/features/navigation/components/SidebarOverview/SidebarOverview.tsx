@@ -15,16 +15,9 @@ export const SidebarOverview: FC = () => {
         {Object.values(links).map((value) => {
           return (
             <Link
-              key={value}
-              to="."
+              to={"."}
               hash={value}
-              hashScrollIntoView={false}
-              onClick={() =>
-                startViewTransition(() => {
-                  setActive(value)
-                  document.getElementById(value)?.scrollIntoView()
-                })
-              }
+              onClick={() => startViewTransition(() => setActive(value))}
               {...(active === value && { "data-active": "" })}
             >
               {value.charAt(0).toUpperCase() + value.slice(1).replace("-", " ")}
