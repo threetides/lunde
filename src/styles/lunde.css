@@ -8,3 +8,7 @@ main {
   flex-direction: column;
   position: relative;
 }
+
+*::view-transition-group(*) {
+  animation-duration: 0.25s;
+}

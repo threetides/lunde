@@ -1,7 +1,8 @@
 import { useState, type FC } from "react"
-import "./SidebarOverview.css"
 import { useAtomValue } from "jotai"
 import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
+import { startViewTransition } from "@/helpers/startViewTransition"
+import "./SidebarOverview.css"
 
 export const SidebarOverview: FC = () => {
   const links = useAtomValue(sidebarOverviewLinksAtom)
@@ -14,7 +15,7 @@ export const SidebarOverview: FC = () => {
           return (
             <a
               href={`#${value}`}
-              onClick={() => setActive(value)}
+              onClick={() => startViewTransition(() => setActive(value))}
               {...(active === value && { "data-active": "" })}
             >
               {value.charAt(0).toUpperCase() + value.slice(1).replace("-", " ")}

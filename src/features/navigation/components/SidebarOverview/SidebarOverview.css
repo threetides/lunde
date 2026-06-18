@@ -6,12 +6,25 @@
   flex-direction: column;
   padding: var(--space-md);
   gap: var(--space-2xs);
+  position: relative;
 
   a {
     color: var(--color-low-contrast-text);
 
     &[data-active] {
       color: var(--color-high-contrast-text);
+      position: relative;
+    }
+
+    &[data-active]::before {
+      content: "";
+      position: absolute;
+      background-color: yellow;
+      width: 2px;
+      top: 0;
+      left: calc(var(--space-md) * -1);
+      bottom: 0;
+      view-transition-name: border-animation;
     }
   }
 }
