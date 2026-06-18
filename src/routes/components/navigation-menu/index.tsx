@@ -9,8 +9,15 @@ import { createFileRoute } from "@tanstack/react-router"
 import { useSetAtom } from "jotai"
 import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
 import { useEffect } from "react"
+import { codeToHtml } from "shiki"
+import { shikiTheme } from "@/features/documentation/components/Example/shikiTheme"
 
 export const Route = createFileRoute("/components/navigation-menu/")({
+  loader: async () => ({
+    horizontal: await codeToHtml(HorizontalSource, { lang: "tsx", theme: shikiTheme }),
+    vertical: await codeToHtml(VerticalSource, { lang: "tsx", theme: shikiTheme }),
+    anatomy: await codeToHtml(Anatomy, { lang: "tsx", theme: shikiTheme })
+  }),
   component: RouteComponent
 })
 
@@ -27,13 +34,15 @@ function RouteComponent() {
     setLinks(links)
   }, [])
 
+  const { horizontal, vertical, anatomy } = Route.useLoaderData()
+
   return (
     <DocumentationPage title="Navigation menu">
       <Example
         subtitle="Horizontal layout"
         link={links.horizontalLayout}
         ingress="The component is oriented horizontal by default"
-        code={HorizontalSource}
+        code={horizontal}
       >
         {Horizontal}
       </Example>
@@ -41,7 +50,7 @@ function RouteComponent() {
         subtitle="Vertical layout"
         link={links.verticalLayout}
         ingress="To orient the component vertically, add the orientation prop and set it to 'vertical'"
-        code={VerticalSource}
+        code={vertical}
       >
         {Vertical}
       </Example>
@@ -49,7 +58,7 @@ function RouteComponent() {
         subtitle="Anatomy"
         link={links.anatomy}
         ingress="The component exposes:"
-        code={Anatomy}
+        code={anatomy}
       />
     </DocumentationPage>
   )

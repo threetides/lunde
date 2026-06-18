@@ -1,6 +1,4 @@
 import type { FC, ReactNode } from "react"
-import ShikiHighlighter from "react-shiki/web"
-import { shikiTheme } from "./shikiTheme"
 import "./Example.css"
 
 interface ExampleProps {
@@ -18,8 +16,6 @@ export const Example: FC<ExampleProps> = ({ subtitle, link, ingress, children, c
       {ingress && <p className="example__ingress">{ingress}</p>}
     </div>
     {children && <div className="example__display">{children}</div>}
-    <ShikiHighlighter language="tsx" theme={shikiTheme} className="example__shiki">
-      {code}
-    </ShikiHighlighter>
+    <div className="example__shiki" dangerouslySetInnerHTML={{ __html: code }} />
   </div>
 )

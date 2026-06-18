@@ -21,7 +21,3 @@
     color: var(--color-low-contrast-text);
   }
 }
-
-.rs-language-label {
-  display: none;
-}
