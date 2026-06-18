@@ -7,6 +7,7 @@
   box-shadow: var(--shadow-xl);
   overflow-y: auto;
   position: fixed;
+  top: 60px;
 
   &[data-starting-style],
   &[data-ending-style] {
