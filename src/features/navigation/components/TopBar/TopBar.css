@@ -6,16 +6,24 @@
   align-items: center;
   background-color: var(--color-app-background);
   width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+}
+
+.topbar a {
+  height: 100%;
 }
 
 .topbar__logo {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+  height: 100%;
 }
 
 .topbar__logo img {
-  height: var(--size-icon-lg);
+  height: 100%;
 }
 
 .topbar__logo h3 {

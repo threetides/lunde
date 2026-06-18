@@ -4,18 +4,15 @@
   flex-direction: column;
   gap: var(--space-3xl);
   flex: 1;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
 }
 
-.documentation-page::-webkit-scrollbar {
-  width: 8px;
-}
-.documentation-page::-webkit-scrollbar-track {
-  background: transparent;
-}
-.documentation-page::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-}
-.documentation-page::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.25);
+@media (min-width: 1440px) {
+  .documentation-page {
+    left: 256px;
+    right: 256px;
+  }
 }

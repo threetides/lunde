@@ -16,9 +16,7 @@ function RootComponent() {
       <NavigationMenuMobile />
       <main>
         <NavigationMenuDesktop />
-        <article data-scroll-restoration-id="docs-scroll">
-          <Outlet />
-        </article>
+        <Outlet />
         <SidebarOverview />
       </main>
     </React.Fragment>

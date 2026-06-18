@@ -2,6 +2,7 @@ import { useState, type FC } from "react"
 import { useAtomValue } from "jotai"
 import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
 import { startViewTransition } from "@/helpers/startViewTransition"
+import { Link } from "@tanstack/react-router"
 import "./SidebarOverview.css"
 
 export const SidebarOverview: FC = () => {
@@ -13,13 +14,21 @@ export const SidebarOverview: FC = () => {
       <nav className="sidebar-overview">
         {Object.values(links).map((value) => {
           return (
-            <a
-              href={`#${value}`}
-              onClick={() => startViewTransition(() => setActive(value))}
+            <Link
+              key={value}
+              to="."
+              hash={value}
+              hashScrollIntoView={false}
+              onClick={() =>
+                startViewTransition(() => {
+                  setActive(value)
+                  document.getElementById(value)?.scrollIntoView()
+                })
+              }
               {...(active === value && { "data-active": "" })}
             >
               {value.charAt(0).toUpperCase() + value.slice(1).replace("-", " ")}
-            </a>
+            </Link>
           )
         })}
       </nav>
