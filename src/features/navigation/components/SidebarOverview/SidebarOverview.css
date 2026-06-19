@@ -23,7 +23,7 @@
     &[data-active]::before {
       content: "";
       position: absolute;
-      background-color: yellow;
+      background-color: var(--color-accent-border);
       width: 2px;
       top: 0;
       left: calc(var(--space-md) * -1);

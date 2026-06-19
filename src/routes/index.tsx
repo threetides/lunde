@@ -1,13 +1,27 @@
 import { DocumentationPage } from "@/features/documentation/components/DocumentationPage/DocumentationPage"
+import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
 import { createFileRoute } from "@tanstack/react-router"
+import { useSetAtom } from "jotai"
+import { useEffect } from "react"
 
 export const Route = createFileRoute("/")({
   component: RouteComponent
 })
 
+const links = {
+  whatIsLunde: "what-is-lunde"
+}
+
 function RouteComponent() {
+  const setLinks = useSetAtom(sidebarOverviewLinksAtom)
+
+  useEffect(() => {
+    setLinks(links)
+  }, [])
+
   return (
     <DocumentationPage title="lunde">
+      <h4 id={links.whatIsLunde}>What is lunde</h4>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
         of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,

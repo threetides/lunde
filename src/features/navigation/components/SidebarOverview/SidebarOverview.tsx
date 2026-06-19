@@ -1,27 +1,33 @@
-import { useState, type FC } from "react"
-import { useAtomValue } from "jotai"
-import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
+import { type FC } from "react"
+import { useAtom, useAtomValue } from "jotai"
+import {
+  sidebarOverviewActiveLinkAtom,
+  sidebarOverviewLinksAtom
+} from "@/features/navigation/navigationAtoms"
 import { startViewTransition } from "@/helpers/startViewTransition"
 import { Link } from "@tanstack/react-router"
 import "./SidebarOverview.css"
 
 export const SidebarOverview: FC = () => {
   const links = useAtomValue(sidebarOverviewLinksAtom)
-  const [active, setActive] = useState("")
+  const [active, setActive] = useAtom(sidebarOverviewActiveLinkAtom)
 
   if (links !== undefined) {
+    const values = Object.values(links)
+    const resolvedActive = active === "" || active === undefined ? values[0] : active
+
     return (
       <nav className="sidebar-overview">
-        {Object.values(links).map((value) => {
+        {values.map((value) => {
           return (
             <Link
               key={value}
               to={"."}
               hash={value}
               onClick={() => startViewTransition(() => setActive(value))}
-              {...(active === value && { "data-active": "" })}
+              {...(resolvedActive === value && { "data-active": "" })}
             >
-              {value.charAt(0).toUpperCase() + value.slice(1).replace("-", " ")}
+              {value.charAt(0).toUpperCase() + value.slice(1).replaceAll("-", " ")}
             </Link>
           )
         })}
