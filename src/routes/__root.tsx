@@ -10,6 +10,7 @@ import { sidebarOverviewActiveLinkAtom } from "@/features/navigation/navigationA
 export const Route = createRootRoute({
   component: RootComponent,
   beforeLoad: ({ location }) => {
+    // Set the active link based on hash in SidebarOverview.tsx whenever navigating pages
     const store = getDefaultStore()
     store.set(sidebarOverviewActiveLinkAtom, location.hash)
   }
