@@ -2,7 +2,7 @@ import { Horizontal } from "@/components/NavigationMenu/Examples/Horizontal"
 import { Vertical } from "@/components/NavigationMenu/Examples/Vertical"
 import HorizontalSource from "@/components/NavigationMenu/Examples/Horizontal.tsx?raw"
 import VerticalSource from "@/components/NavigationMenu/Examples/Vertical.tsx?raw"
-import Anatomy from "@/components/NavigationMenu/Examples/Anatomy.tsx?raw"
+import AnatomySource from "@/components/NavigationMenu/Examples/Anatomy.tsx?raw"
 import { DocumentationPage } from "@/features/documentation/components/DocumentationPage/DocumentationPage"
 import { Example } from "@/features/documentation/components/Example/Example"
 import { createFileRoute } from "@tanstack/react-router"
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/components/navigation-menu/")({
   loader: async () => ({
     horizontal: await codeToHtml(HorizontalSource, { lang: "tsx", theme: shikiTheme }),
     vertical: await codeToHtml(VerticalSource, { lang: "tsx", theme: shikiTheme }),
-    anatomy: await codeToHtml(Anatomy, { lang: "tsx", theme: shikiTheme })
+    anatomy: await codeToHtml(AnatomySource, { lang: "tsx", theme: shikiTheme })
   }),
   component: RouteComponent
 })

@@ -16,7 +16,7 @@ export const Example: FC<ExampleProps> = ({ subtitle, link, ingress, children, c
         <h4 id={link}>{subtitle}</h4>
         {ingress && <p className="example__ingress">{ingress}</p>}
       </div>
-      <div className="example__container">{children}</div>
+      {children && <div className="example__container">{children}</div>}
     </div>
     <div className="example__shiki" dangerouslySetInnerHTML={{ __html: code }} />
   </div>

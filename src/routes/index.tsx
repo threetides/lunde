@@ -21,95 +21,31 @@ function RouteComponent() {
 
   return (
     <DocumentationPage title="lunde">
-      <h4 id={links.whatIsLunde}>What is lunde</h4>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-        popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32.
-      </p>
+      <div className="intro">
+        <h4 id={links.whatIsLunde}>What is lunde</h4>
+        <p>
+          lunde is a design system made by{" "}
+          <a href="https://github.com/threetides" target="_blank" rel="noreferrer" className="link">
+            threetides
+          </a>
+          , a personal studio. It's a small React library built on top of{" "}
+          <a href="https://base-ui.com" target="_blank" rel="noreferrer" className="link">
+            Base UI
+          </a>
+          . It wraps Base UI's unstyled, accessible primitives in a friendlier API that exposes only
+          what most interfaces need, shipped styled and ready to use.
+        </p>
+        <p>
+          Alongside the components, lunde ships a set of CSS tokens for the studio's design
+          language: color, spacing, typography, radius, and shadows. The tokens are the foundation
+          everything else is built on, so the components stay consistent and easy to theme.
+        </p>
+        <p>
+          Each component is documented by a page that renders live examples next to their source.
+          The source is the real code that runs, so what you read is always what you get. Browse the
+          components in the sidebar to see them in action.
+        </p>
+      </div>
     </DocumentationPage>
   )
 }

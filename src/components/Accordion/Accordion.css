@@ -28,6 +28,7 @@
   height: var(--accordion-panel-height);
   overflow: hidden;
   transition: height 0.25s;
+  color: var(--color-low-contrast-text);
 }
 
 .accordion__panel[data-starting-style],
