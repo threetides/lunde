@@ -11,6 +11,10 @@ import { sidebarOverviewLinksAtom } from "@/features/navigation/navigationAtoms"
 import { useEffect } from "react"
 import { codeToHtml } from "shiki"
 import { shikiTheme } from "@/features/documentation/components/Example/shikiTheme"
+import {
+  APIReference,
+  type API
+} from "@/features/documentation/components/APIReference/APIReference"
 
 export const Route = createFileRoute("/components/navigation-menu/")({
   loader: async () => ({
@@ -24,8 +28,16 @@ export const Route = createFileRoute("/components/navigation-menu/")({
 const links = {
   horizontalLayout: "horizontal-layout",
   verticalLayout: "vertical-layout",
-  anatomy: "anatomy"
+  anatomy: "anatomy",
+  apiReference: "api-reference"
 }
+
+const api: API[] = [
+  { title: "NavigationMenu", link: "https://base-ui.com/react/components/navigation-menu#root" },
+  { title: "List", link: "https://base-ui.com/react/components/navigation-menu#list" },
+  { title: "Item", link: "https://base-ui.com/react/components/navigation-menu#item" },
+  { title: "Link", link: "https://base-ui.com/react/components/navigation-menu#link" }
+]
 
 function RouteComponent() {
   const setLinks = useSetAtom(sidebarOverviewLinksAtom)
@@ -60,6 +72,7 @@ function RouteComponent() {
         ingress="The component exposes:"
         code={anatomy}
       />
+      <APIReference api={api} link={links.apiReference} />
     </DocumentationPage>
   )
 }

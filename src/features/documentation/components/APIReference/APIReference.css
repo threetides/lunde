@@ -1,0 +1,11 @@
+.api-reference {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.api-reference__ingress {
+  p {
+    color: var(--color-low-contrast-text);
+  }
+}

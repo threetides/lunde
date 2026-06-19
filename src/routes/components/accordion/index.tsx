@@ -11,6 +11,10 @@ import { codeToHtml } from "shiki"
 import { shikiTheme } from "@/features/documentation/components/Example/shikiTheme"
 import { SinglePanel } from "@/components/Accordion/Examples/SinglePanel"
 import { MultiplePanels } from "@/components/Accordion/Examples/MultiplePanels"
+import {
+  APIReference,
+  type API
+} from "@/features/documentation/components/APIReference/APIReference"
 
 export const Route = createFileRoute("/components/accordion/")({
   loader: async () => ({
@@ -24,8 +28,16 @@ export const Route = createFileRoute("/components/accordion/")({
 const links = {
   singlePanel: "single-panel",
   multiplePanels: "multiple-panels",
-  anatomy: "anatomy"
+  anatomy: "anatomy",
+  apiReference: "api-reference"
 }
+
+const api: API[] = [
+  { title: "Accordion", link: "https://base-ui.com/react/components/accordion#root" },
+  { title: "Item", link: "https://base-ui.com/react/components/accordion#item" },
+  { title: "Trigger", link: "https://base-ui.com/react/components/accordion#trigger" },
+  { title: "Panel", link: "https://base-ui.com/react/components/accordion#panel" }
+]
 
 function RouteComponent() {
   const setLinks = useSetAtom(sidebarOverviewLinksAtom)
@@ -60,6 +72,7 @@ function RouteComponent() {
         ingress="The component exposes:"
         code={anatomy}
       />
+      <APIReference api={api} link={links.apiReference} />
     </DocumentationPage>
   )
 }
