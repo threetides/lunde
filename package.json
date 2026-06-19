@@ -34,7 +34,7 @@
     "globals": "^17.6.0",
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
-    "typescript": "~6.0.3",
+    "typescript": "^7.0.1-rc",
     "vite": "^8.0.14"
   }
 }

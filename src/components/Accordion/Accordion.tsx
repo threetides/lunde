@@ -3,7 +3,10 @@ import { Accordion as BaseAccordion } from "@base-ui/react/accordion"
 import "./Accordion.css"
 
 // your own object — safe to mutate
-const Root = ({ className, ...props }: ComponentProps<typeof BaseAccordion.Root>) => {
+const Root = ({
+  className,
+  ...props
+}: Omit<ComponentProps<typeof BaseAccordion.Root>, "loopFocus">) => {
   return (
     <BaseAccordion.Root {...props} className={className ? `accordion ${className}` : "accordion"} />
   )
