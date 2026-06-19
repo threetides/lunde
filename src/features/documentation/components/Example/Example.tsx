@@ -11,11 +11,13 @@ interface ExampleProps {
 
 export const Example: FC<ExampleProps> = ({ subtitle, link, ingress, children, code }) => (
   <div className="example">
-    <div className="example__ingress">
-      <h4 id={link}>{subtitle}</h4>
-      {ingress && <p className="example__ingress">{ingress}</p>}
+    <div className="example__component">
+      <div className="example__ingress">
+        <h4 id={link}>{subtitle}</h4>
+        {ingress && <p className="example__ingress">{ingress}</p>}
+      </div>
+      {children}
     </div>
-    {children && <div className="example__display">{children}</div>}
     <div className="example__shiki" dangerouslySetInnerHTML={{ __html: code }} />
   </div>
 )

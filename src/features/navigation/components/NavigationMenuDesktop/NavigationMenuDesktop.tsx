@@ -19,6 +19,12 @@ export const NavigationMenuDesktop: FC = () => {
         <NavigationMenu.Item>
           <NavigationMenu.Link
             icon={ExternalLink}
+            render={<Link to="/components/accordion">Accordion</Link>}
+          />
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link
+            icon={ExternalLink}
             render={<Link to="/components/navigation-menu">Navigation menu</Link>}
           />
         </NavigationMenu.Item>

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ComponentsNavigationMenuIndexRouteImport } from './routes/components/navigation-menu/index'
+import { Route as ComponentsAccordionIndexRouteImport } from './routes/components/accordion/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,30 +24,44 @@ const ComponentsNavigationMenuIndexRoute =
     path: '/components/navigation-menu/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ComponentsAccordionIndexRoute =
+  ComponentsAccordionIndexRouteImport.update({
+    id: '/components/accordion/',
+    path: '/components/accordion/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/components/accordion/': typeof ComponentsAccordionIndexRoute
   '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/components/accordion': typeof ComponentsAccordionIndexRoute
   '/components/navigation-menu': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/components/accordion/': typeof ComponentsAccordionIndexRoute
   '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/components/navigation-menu/'
+  fullPaths: '/' | '/components/accordion/' | '/components/navigation-menu/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/components/navigation-menu'
-  id: '__root__' | '/' | '/components/navigation-menu/'
+  to: '/' | '/components/accordion' | '/components/navigation-menu'
+  id:
+    | '__root__'
+    | '/'
+    | '/components/accordion/'
+    | '/components/navigation-menu/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ComponentsAccordionIndexRoute: typeof ComponentsAccordionIndexRoute
   ComponentsNavigationMenuIndexRoute: typeof ComponentsNavigationMenuIndexRoute
 }
 
@@ -66,11 +81,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComponentsNavigationMenuIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/components/accordion/': {
+      id: '/components/accordion/'
+      path: '/components/accordion'
+      fullPath: '/components/accordion/'
+      preLoaderRoute: typeof ComponentsAccordionIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ComponentsAccordionIndexRoute: ComponentsAccordionIndexRoute,
   ComponentsNavigationMenuIndexRoute: ComponentsNavigationMenuIndexRoute,
 }
 export const routeTree = rootRouteImport

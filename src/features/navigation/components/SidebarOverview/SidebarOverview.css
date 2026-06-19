@@ -14,10 +14,12 @@
 
   h4 {
     color: var(--color-low-contrast-text);
+    margin-bottom: var(--space-md);
   }
 
   a {
     color: var(--color-low-contrast-text);
+    font-size: var(--font-size-sm);
 
     &[data-active] {
       color: var(--color-high-contrast-text);
