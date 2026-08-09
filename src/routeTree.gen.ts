@@ -8,77 +8,109 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root"
-import { Route as IndexRouteImport } from "./routes/index"
-import { Route as ComponentsNavigationMenuIndexRouteImport } from "./routes/components/navigation-menu/index"
-import { Route as ComponentsAccordionIndexRouteImport } from "./routes/components/accordion/index"
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ComponentsNavigationMenuIndexRouteImport } from './routes/components/navigation-menu/index'
+import { Route as ComponentsButtonIndexRouteImport } from './routes/components/button/index'
+import { Route as ComponentsAccordionIndexRouteImport } from './routes/components/accordion/index'
 
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
-  getParentRoute: () => rootRouteImport
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ComponentsNavigationMenuIndexRoute = ComponentsNavigationMenuIndexRouteImport.update({
-  id: "/components/navigation-menu/",
-  path: "/components/navigation-menu/",
-  getParentRoute: () => rootRouteImport
+const ComponentsNavigationMenuIndexRoute =
+  ComponentsNavigationMenuIndexRouteImport.update({
+    id: '/components/navigation-menu/',
+    path: '/components/navigation-menu/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ComponentsButtonIndexRoute = ComponentsButtonIndexRouteImport.update({
+  id: '/components/button/',
+  path: '/components/button/',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ComponentsAccordionIndexRoute = ComponentsAccordionIndexRouteImport.update({
-  id: "/components/accordion/",
-  path: "/components/accordion/",
-  getParentRoute: () => rootRouteImport
-} as any)
+const ComponentsAccordionIndexRoute =
+  ComponentsAccordionIndexRouteImport.update({
+    id: '/components/accordion/',
+    path: '/components/accordion/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute
-  "/components/accordion/": typeof ComponentsAccordionIndexRoute
-  "/components/navigation-menu/": typeof ComponentsNavigationMenuIndexRoute
+  '/': typeof IndexRoute
+  '/components/accordion/': typeof ComponentsAccordionIndexRoute
+  '/components/button/': typeof ComponentsButtonIndexRoute
+  '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute
-  "/components/accordion": typeof ComponentsAccordionIndexRoute
-  "/components/navigation-menu": typeof ComponentsNavigationMenuIndexRoute
+  '/': typeof IndexRoute
+  '/components/accordion': typeof ComponentsAccordionIndexRoute
+  '/components/button': typeof ComponentsButtonIndexRoute
+  '/components/navigation-menu': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  "/": typeof IndexRoute
-  "/components/accordion/": typeof ComponentsAccordionIndexRoute
-  "/components/navigation-menu/": typeof ComponentsNavigationMenuIndexRoute
+  '/': typeof IndexRoute
+  '/components/accordion/': typeof ComponentsAccordionIndexRoute
+  '/components/button/': typeof ComponentsButtonIndexRoute
+  '/components/navigation-menu/': typeof ComponentsNavigationMenuIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/components/accordion/" | "/components/navigation-menu/"
+  fullPaths:
+    | '/'
+    | '/components/accordion/'
+    | '/components/button/'
+    | '/components/navigation-menu/'
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/components/accordion" | "/components/navigation-menu"
-  id: "__root__" | "/" | "/components/accordion/" | "/components/navigation-menu/"
+  to:
+    | '/'
+    | '/components/accordion'
+    | '/components/button'
+    | '/components/navigation-menu'
+  id:
+    | '__root__'
+    | '/'
+    | '/components/accordion/'
+    | '/components/button/'
+    | '/components/navigation-menu/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ComponentsAccordionIndexRoute: typeof ComponentsAccordionIndexRoute
+  ComponentsButtonIndexRoute: typeof ComponentsButtonIndexRoute
   ComponentsNavigationMenuIndexRoute: typeof ComponentsNavigationMenuIndexRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/": {
-      id: "/"
-      path: "/"
-      fullPath: "/"
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    "/components/navigation-menu/": {
-      id: "/components/navigation-menu/"
-      path: "/components/navigation-menu"
-      fullPath: "/components/navigation-menu/"
+    '/components/navigation-menu/': {
+      id: '/components/navigation-menu/'
+      path: '/components/navigation-menu'
+      fullPath: '/components/navigation-menu/'
       preLoaderRoute: typeof ComponentsNavigationMenuIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    "/components/accordion/": {
-      id: "/components/accordion/"
-      path: "/components/accordion"
-      fullPath: "/components/accordion/"
+    '/components/button/': {
+      id: '/components/button/'
+      path: '/components/button'
+      fullPath: '/components/button/'
+      preLoaderRoute: typeof ComponentsButtonIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/accordion/': {
+      id: '/components/accordion/'
+      path: '/components/accordion'
+      fullPath: '/components/accordion/'
       preLoaderRoute: typeof ComponentsAccordionIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -88,7 +120,8 @@ declare module "@tanstack/react-router" {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ComponentsAccordionIndexRoute: ComponentsAccordionIndexRoute,
-  ComponentsNavigationMenuIndexRoute: ComponentsNavigationMenuIndexRoute
+  ComponentsButtonIndexRoute: ComponentsButtonIndexRoute,
+  ComponentsNavigationMenuIndexRoute: ComponentsNavigationMenuIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

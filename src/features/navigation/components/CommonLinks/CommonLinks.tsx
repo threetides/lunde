@@ -33,6 +33,13 @@ export const CommonLinks: FC = () => {
         <NavigationMenu.Item>
           <NavigationMenu.Link
             icon={ExternalLink}
+            render={<Link to="/components/button">Button</Link>}
+            onClick={() => setOpen(false)}
+          />
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link
+            icon={ExternalLink}
             render={<Link to="/components/navigation-menu">Navigation menu</Link>}
             onClick={() => setOpen(false)}
           />
