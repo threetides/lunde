@@ -10,10 +10,6 @@
   gap: var(--space-md);
 }
 
-.example__container {
-  overflow: auto;
-}
-
 .example__shiki .shiki {
   padding: var(--space-md);
   border-radius: var(--radius-md);

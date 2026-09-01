@@ -30,7 +30,7 @@ bun run check    # format + lint + type-check
 
 ```
 src/
-├── components/   the design system — Base UI primitives wrapped and styled
+├── components/   the design system: Base UI primitives wrapped and styled
 ├── features/     the documentation site that consumes them
 ├── routes/       file-based routes (TanStack Router)
 └── styles/       reset, design tokens, and global styles
@@ -40,7 +40,7 @@ Two layers: `components/` is the library, `features/` is the site built on it.
 
 A component is a thin wrapper over a Base UI primitive, styled with its own
 CSS. Each one is documented by a route that renders live examples next to their
-source — the source is imported with `?raw`, so the code shown is always the
+source. The source is imported with `?raw`, so the code shown is always the
 code that runs.
 
 Design tokens live in [`src/styles/tokens.css`](src/styles/tokens.css).
